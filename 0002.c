@@ -1,3 +1,6 @@
+/*
+ * Sum of even Fibonacci numbers less than or equal to 4000000.
+ */
 #include <stdio.h>
 
 long fib(int n) {
