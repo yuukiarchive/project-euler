@@ -18,7 +18,7 @@ int main(void) {
 
     long f;
     int i;
-    for (i = 1; (f = fib(i)) < 4000000; i++) {
+    for (i = 1; (f = fib(i)) <= 4000000; i++) {
         if (f % 2 == 0) {
             sum += f;
         }
