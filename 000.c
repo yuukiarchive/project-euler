@@ -18,5 +18,5 @@ int main(void) {
         }
     }
 
-    printf("%d\n", sum);
+    printf("%ld\n", sum);
 }
