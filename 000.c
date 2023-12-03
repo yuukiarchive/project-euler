@@ -4,7 +4,12 @@
 #include <stdio.h>
 
 int main(void) {
-    int sum = 0;
+    /*
+     * `int` is only guaranteed to go up to 32767, which is not enough. `long`
+     * is guaranteed to go up to 2147483647, which is enough since it is even
+     * greater than 1 + ... + 1000 = 1000*1001/2 = 500500.
+     */
+    long sum = 0;
 
     int i;
     for (i = 1; i < 1000; i++) {
