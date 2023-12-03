@@ -1,4 +1,4 @@
-/*
+/**
  * Sum of positive integers less than 1000 that are divisible by 3 or 5.
  */
 #include <stdio.h>

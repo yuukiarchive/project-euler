@@ -1,8 +1,13 @@
-/*
+/**
  * Sum of even Fibonacci numbers less than or equal to 4000000.
  */
 #include <stdio.h>
 
+/**
+ * Computes the nth Fibonacci number.
+ * @param n the index of the Fibonacci number to compute.
+ * @return the nth Fibonacci number.
+ */
 long fib(int n) {
     if (n == 1) {
         return 1;
@@ -16,11 +21,11 @@ long fib(int n) {
 int main(void) {
     long sum = 0;
 
-    long f;
+    long value;
     int i;
-    for (i = 1; (f = fib(i)) <= 4000000; i++) {
-        if (f % 2 == 0) {
-            sum += f;
+    for (i = 1; (value = fib(i)) <= 4000000; i++) {
+        if (value % 2 == 0) {
+            sum += value;
         }
     }
 
