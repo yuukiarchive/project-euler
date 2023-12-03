@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fib(int n) {
+long fib(int n) {
     if (n == 1) {
         return 1;
     }
@@ -12,6 +12,7 @@ int fib(int n) {
 
 int main(void) {
     long sum = 0;
+
     long f;
     int i;
     for (i = 1; (f = fib(i)) < 4000000; i++) {
@@ -19,5 +20,6 @@ int main(void) {
             sum += f;
         }
     }
+
     printf("%ld\n", sum);
 }
