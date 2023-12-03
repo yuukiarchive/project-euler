@@ -8,7 +8,7 @@
  * @param n the index of the Fibonacci number to compute.
  * @return the nth Fibonacci number.
  */
-long fib(int n) {
+long fib(const int n) {
     if (n == 1) {
         return 1;
     }
