@@ -24,6 +24,7 @@ int factor(long long n, long long prime_factors[]) {
         while (n % i == 0) {
             prime_factors[count] = i;
             count++;
+
             n /= i;
         }
     }
