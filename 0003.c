@@ -3,13 +3,19 @@
  */
 #include <stdio.h>
 
-/*
- * An upper bound on the number of prime factors of n (with multiplicity)
- * Omega(n) is log_2 (n). `long long` is only guaranteed to go up to 2^63 - 1,
- * so 64 is sufficient.
+/**
+ * The size of the array to store prime factors. An upper bound on the number of
+ * prime factors of n (with multiplicity) Omega(n) is log_2 (n). Since `long
+ * long` is only guaranteed to go up to 2^63 - 1, 64 is sufficient.
  */
-#define PRIME_FACTOR_BUFFER_SIZE 64
+#define MAX_PRIME_FACTOR_COUNT 64
 
+/**
+ * Factors `n` into primes.
+ * @param n The integer to factor.
+ * @param prime_factors The array to store prime factors.
+ * @return The number of prime factors of `n`.
+ */
 int factor(long long n, long long prime_factors[]) {
     int count = 0;
 
@@ -31,7 +37,7 @@ int factor(long long n, long long prime_factors[]) {
 }
 
 int main(void) {
-    long long prime_factors[PRIME_FACTOR_BUFFER_SIZE];
-    int count = factor(600851475143LL, prime_factors);
+    long long prime_factors[MAX_PRIME_FACTOR_COUNT];
+    int count = factor(600851475143, prime_factors);
     printf("%lld\n", prime_factors[count - 1]);
 }

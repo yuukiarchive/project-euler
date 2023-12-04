@@ -4,9 +4,9 @@
 #include <stdio.h>
 
 /**
- * Computes the nth Fibonacci number.
- * @param n the index of the Fibonacci number to compute.
- * @return the nth Fibonacci number.
+ * Computes the `n`-th Fibonacci number.
+ * @param n The index of the Fibonacci number to compute.
+ * @return The `n`-th Fibonacci number.
  */
 long fib(const int n) {
     if (n == 1) {
