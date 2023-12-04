@@ -1,12 +1,12 @@
 /**
- * Sum of even Fibonacci numbers less than or equal to 4000000.
+ * Sum of the even Fibonacci numbers less than or equal to 4000000.
  */
 #include <stdio.h>
 
 /**
- * Computes the `n`-th Fibonacci number.
+ * Computes the `n`th Fibonacci number.
  * @param n The index of the Fibonacci number to compute.
- * @return The `n`-th Fibonacci number.
+ * @return The `n`th Fibonacci number.
  */
 long fib(const int n) {
     if (n == 1) {
