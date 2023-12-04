@@ -12,7 +12,7 @@
 
 /**
  * Factors `n` into primes.
- * @param n The integer to factor.
+ * @param n The positive integer to factor.
  * @param prime_factors The array to store prime factors.
  * @return The number of prime factors of `n`.
  */
@@ -38,6 +38,6 @@ int factor(long long n, long long prime_factors[]) {
 
 int main(void) {
     long long prime_factors[MAX_PRIME_FACTOR_COUNT];
-    int count = factor(600851475143, prime_factors);
+    const int count = factor(600851475143, prime_factors);
     printf("%lld\n", prime_factors[count - 1]);
 }
