@@ -15,7 +15,7 @@
 /**
  * Factors `n` into primes.
  * @param n The integer to factor.
- * @param prime_factors The array to store prime factors.
+ * @param prime_factors The array to store the prime factors of `n`.
  * @return The number of prime factors of `n`.
  */
 int factor(long long n, long long prime_factors[]) {
