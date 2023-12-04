@@ -4,9 +4,11 @@
 #include <stdio.h>
 
 /**
- * The size of the array to store prime factors. The number of prime factors of
- * n (with repetition), Omega(n), is bounded by log_2 (n). Since `long long` is
- * only guaranteed to go up to 2^63 - 1, 64 is sufficient.
+ * The size of the array to store prime factors. Let Omega(n) be the number of
+ * prime factors of n (with repetition). Then Omega(n) <= log_2 (n) because:
+ *     n = p_1 p_2 ... p_i >= 2*2*...*2 = 2^Omega(n).
+ * Since `long long` is only guaranteed to go up to 2^63 - 1, the size of 64 is
+ * sufficient.
  */
 #define MAX_PRIME_FACTOR_COUNT 64
 
