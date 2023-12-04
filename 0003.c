@@ -6,8 +6,8 @@
 
 /**
  * The size of the array to store prime factors. For the number of prime factors
- * of a positive integer n (with repetition) Omega(n), it holds that Omega(n) <=
- * log_2 (n) because:
+ * of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n)
+ * <= log_2 (n) because:
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
@@ -20,7 +20,10 @@ int factor(long long, long long[]);
 
 int main(void) {
     long long prime_factors[MAX_PRIME_FACTOR_COUNT];
+
+    /* Factors 600851475143. */
     const int count = factor(600851475143, prime_factors);
+
     printf("%lld\n", prime_factors[count - 1]);
 }
 
