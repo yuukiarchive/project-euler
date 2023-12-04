@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 64
 
 int factor(long long n, long long prime_factors[]) {
     int count = 0;
