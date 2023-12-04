@@ -14,11 +14,16 @@ int factor(long long n, long long prime_factors[]) {
         }
     }
 
+    if (n != 1) {
+        prime_factors[count] = n;
+        count++;
+    }
+
     return count;
 }
 
 int main(void) {
     long long prime_factors[BUFFER_SIZE];
-    int count = factor(600851475143, prime_factors);
+    int count = factor(600851475143LL, prime_factors);
     printf("%lld\n", prime_factors[count - 1]);
 }
