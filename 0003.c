@@ -6,7 +6,7 @@
 /**
  * The size of the array to store prime factors. Let Omega(n) be the number of
  * prime factors of n (with repetition). Then Omega(n) <= log_2 (n) because:
- *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^Omega(n).
+ *     n = p_1 p_2 ... p_(Omega(n)) >= 2*2*...*2 = 2^(Omega(n)).
  * Since `long long` is only guaranteed to go up to 2^63 - 1, the size of 64 is
  * sufficient.
  */
