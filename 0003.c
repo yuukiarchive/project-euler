@@ -19,6 +19,7 @@
 int factor(long long n, long long prime_factors[]) {
     int count = 0;
 
+    /* Performs trial division by the integers from 2 to n - 1. */
     long long i;
     for (i = 2; i < n; i++) {
         while (n % i == 0) {
