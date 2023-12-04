@@ -4,20 +4,7 @@
  */
 #include <stdio.h>
 
-/**
- * Computes the `n`th Fibonacci number.
- * @param n The index of the Fibonacci number to compute.
- * @return The `n`th Fibonacci number.
- */
-long fib(const int n) {
-    if (n == 1) {
-        return 1;
-    }
-    if (n == 2) {
-        return 2;
-    }
-    return fib(n - 1) + fib(n - 2);
-}
+long fib(const int);
 
 int main(void) {
     long sum = 0;
@@ -31,4 +18,19 @@ int main(void) {
     }
 
     printf("%ld\n", sum);
+}
+
+/**
+ * Computes the `n`th Fibonacci number.
+ * @param n The index of the Fibonacci number to compute.
+ * @return The `n`th Fibonacci number.
+ */
+long fib(const int n) {
+    if (n == 1) {
+        return 1;
+    }
+    if (n == 2) {
+        return 2;
+    }
+    return fib(n - 1) + fib(n - 2);
 }

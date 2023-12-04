@@ -16,6 +16,14 @@
  */
 #define MAX_PRIME_FACTOR_COUNT 64
 
+int factor(long long, long long[]);
+
+int main(void) {
+    long long prime_factors[MAX_PRIME_FACTOR_COUNT];
+    const int count = factor(600851475143, prime_factors);
+    printf("%lld\n", prime_factors[count - 1]);
+}
+
 /**
  * Factors `n` into primes.
  * @param n The integer to factor.
@@ -41,10 +49,4 @@ int factor(long long n, long long prime_factors[]) {
     }
 
     return count;
-}
-
-int main(void) {
-    long long prime_factors[MAX_PRIME_FACTOR_COUNT];
-    const int count = factor(600851475143, prime_factors);
-    printf("%lld\n", prime_factors[count - 1]);
 }

@@ -8,8 +8,8 @@ int main(void) {
     /*
      * An `int` is only guaranteed to go up to 2^15 - 1 = 32767, which is not
      * enough. A `long` is guaranteed to go up to 2^31 - 1 = 2147483647, which
-     * is sufficient since it is even greater than 1 + ... + 999 = 999*1000/2 =
-     * 499500.
+     * is sufficient since it is even greater than 1 + 2 + ... + 999 =
+     * 999*1000/2 = 499500.
      */
     long sum = 0;
 
