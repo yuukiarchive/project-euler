@@ -4,8 +4,8 @@
 #include <stdio.h>
 
 /**
- * The size of the array to store prime factors. An upper bound on the number of
- * prime factors of n (with multiplicity) Omega(n) is log_2 (n). Since `long
+ * The size of the array to store prime factors. The number of prime factors of
+ * n (with multiplicity), Omega(n), is upper bounded by log_2 (n). Since `long
  * long` is only guaranteed to go up to 2^63 - 1, 64 is sufficient.
  */
 #define MAX_PRIME_FACTOR_COUNT 64
