@@ -26,7 +26,7 @@ int main(void) {
 
 /**
  * Factors `n` into primes.
- * @param n The integer to factor.
+ * @param n The positive integer to factor.
  * @param prime_factors The array to store the prime factors of `n`.
  * @return The number of prime factors of `n`.
  */
