@@ -1,4 +1,5 @@
 /**
+ * @file
  * Largest palindromic number that is the product of two 3-digit positive
  * integers.
  */
