@@ -25,6 +25,7 @@ int main(void) {
     const int count = factor(600851475143, prime_factors);
 
     printf("%lld\n", prime_factors[count - 1]);
+    return 0;
 }
 
 /**
