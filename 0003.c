@@ -6,8 +6,8 @@
 
 /**
  * The size of the array to store prime factors. For the number of prime factors
- * of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n)
- * <= log_2 (n) because:
+ * of an integer n > 1 (with multiplicity) Omega(n), it holds that Omega(n) <=
+ * log_2 (n) because:
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
@@ -30,7 +30,7 @@ int main(void) {
 
 /**
  * Factors `n` into primes.
- * @param n The positive integer to factor.
+ * @param n The integer to factor, must be > 1.
  * @param prime_factors The array to store the prime factors of `n`.
  * @return The number of prime factors of `n`.
  */

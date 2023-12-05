@@ -23,8 +23,6 @@ int main(void) {
 
 /**
  * Computes the `n`th Fibonacci number.
- * @param n The index of the Fibonacci number to compute.
- * @return The `n`th Fibonacci number.
  */
 long fib(const int n) {
     if (n == 1) {
