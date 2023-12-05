@@ -40,7 +40,6 @@ bool is_palindromic(const long n) {
     /* Duplicates and reverses the string. */
     char reversed[12];
     strcpy(reversed, str);
-
     reverse(reversed);
 
     /* Returns whether the reverse of `n` is equal to `n`. */
