@@ -34,21 +34,21 @@ int main(void) {
  */
 bool is_palindromic(const long n) {
     /* Converts `n` to a string. */
-    char n_str[21];
-    sprintf(n_str, "%ld", n);
+    char str[12];
+    snprintf(str, 12, "%ld", n);
 
     /* Duplicates and reverses the string. */
-    char reversed[21];
-    strcpy(reversed, n_str);
+    char reversed[12];
+    strcpy(reversed, str);
 
     reverse_string(reversed);
 
-    /* Returns whether the reversal of `n` is equal to `n`. */
-    return strcmp(reversed, n_str) == 0;
+    /* Returns whether the reverse of `n` is equal to `n`. */
+    return strcmp(reversed, str) == 0;
 }
 
 /**
- * Reverses a string.
+ * Reverses a string in-place.
  */
 void reverse_string(char *str) {
     int i;
