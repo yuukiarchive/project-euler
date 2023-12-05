@@ -11,7 +11,7 @@
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
- * where k = Omega(n). Since `long long` is only guaranteed to go up to 2^63 -
+ * where k = Omega(n). Since a `long long` is only guaranteed to go up to 2^63 -
  * 1, the size of 64 is sufficient.
  */
 #define MAX_PRIME_FACTOR_COUNT 64
