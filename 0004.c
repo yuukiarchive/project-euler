@@ -8,7 +8,7 @@
 #include <string.h>
 
 bool is_palindromic(const long);
-void reverse_string(char *);
+void reverse(char *);
 
 int main(void) {
     long max_palindrome = -1;
@@ -41,7 +41,7 @@ bool is_palindromic(const long n) {
     char reversed[12];
     strcpy(reversed, str);
 
-    reverse_string(reversed);
+    reverse(reversed);
 
     /* Returns whether the reverse of `n` is equal to `n`. */
     return strcmp(reversed, str) == 0;
@@ -50,7 +50,7 @@ bool is_palindromic(const long n) {
 /**
  * Reverses a string in-place.
  */
-void reverse_string(char *str) {
+void reverse(char *str) {
     int i;
     int j;
     char tmp;
