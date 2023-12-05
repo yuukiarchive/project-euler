@@ -50,10 +50,11 @@ bool is_palindromic(const long n) {
  * Reverses a string in-place.
  */
 void reverse(char *str) {
+    int length = strlen(str);
     int i;
     int j;
     char tmp;
-    for (i = 0, j = strlen(str) - 1; i < j; i++, j--) {
+    for (i = 0, j = length - 1; i < j; i++, j--) {
         tmp = str[i];
         str[i] = str[j];
         str[j] = tmp;
