@@ -53,7 +53,7 @@ bool is_palindromic(const long n) {
  * Reverses a string in-place.
  */
 void reverse(char *str) {
-    /* If it is an empty string, does nothing. */
+    /* If the string is empty, does nothing. */
     if (!*str) {
         return;
     }
