@@ -10,19 +10,17 @@ int main(void) {
     long sum = 0;
 
     long value;
-    int i;
-    for (i = 1; (value = fib(i)) <= 4000000; i++) {
+    for (int i = 1; (value = fib(i)) <= 4000000; i++) {
         if (value % 2 == 0) {
             sum += value;
         }
     }
 
     printf("%ld\n", sum);
-    return 0;
 }
 
 /**
- * Computes the `n`th Fibonacci number.
+ * Computes the nth Fibonacci number, for n >= 1, starting with 1 and 2.
  */
 long fib(const int n) {
     if (n == 1) {

@@ -13,12 +13,15 @@ void reverse(char *);
 int main(void) {
     long max_palindrome = -1;
 
-    int i;
-    int j;
-    long product;
-    for (i = 100; i <= 999; i++) {
-        for (j = 100; j <= 999; j++) {
-            product = i * j;
+    /*
+     * Loops through 900^2 = 810000 numbers, the Cartesian square of 3-digit
+     * numbers. This is inefficient. Even in case a Cartesian product is really
+     * needed, `std::views::cartesian_product` in C++23 (or `itertools.product`
+     * in Python), for example, is more efficient than a nested `for`.
+     */
+    for (int i = 100; i <= 999; i++) {
+        for (int j = 100; j <= 999; j++) {
+            const long product = i * j;
             if (is_palindromic(product) && product > max_palindrome) {
                 max_palindrome = product;
             }
@@ -26,11 +29,11 @@ int main(void) {
     }
 
     printf("%ld\n", max_palindrome);
-    return 0;
 }
 
 /**
- * Determines if `n` is palindromic.
+ * Determines if an integer is palindromic.
+ * @param n An integer >= 0.
  */
 bool is_palindromic(const long n) {
     /* Converts `n` to a string. */
@@ -56,11 +59,8 @@ void reverse(char *str) {
     }
 
     const size_t length = strlen(str);
-    size_t i;
-    size_t j;
-    char tmp;
-    for (i = 0, j = length - 1; i < j; i++, j--) {
-        tmp = str[i];
+    for (size_t i = 0, j = length - 1; i < j; i++, j--) {
+        char tmp = str[i];
         str[i] = str[j];
         str[j] = tmp;
     }

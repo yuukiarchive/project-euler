@@ -6,8 +6,8 @@
 
 /**
  * The size of the array to store prime factors. For the number of prime factors
- * of an integer n > 1 (with multiplicity) Omega(n), it holds that Omega(n) <=
- * log_2 (n) because:
+ * of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n)
+ * <= log_2 (n) because:
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
@@ -25,31 +25,28 @@ int main(void) {
     const int count = factor(600851475143, prime_factors);
 
     printf("%lld\n", prime_factors[count - 1]);
-    return 0;
 }
 
 /**
- * Factors `n` into primes.
+ * Factors an integer into primes.
  * @param n The integer to factor, must be > 1.
- * @param prime_factors The array to store the prime factors of `n`.
+ * @param prime_factors The array to store the prime factors of `n` in order
+ * from smallest to largest.
  * @return The number of prime factors of `n`.
  */
 int factor(long long n, long long prime_factors[]) {
     int count = 0;
 
     /* Performs trial division by the integers from 2 to `n` - 1. */
-    long long i;
-    for (i = 2; i < n; i++) {
+    for (long long i = 2; i < n; i++) {
         while (n % i == 0) {
-            prime_factors[count] = i;
-            count++;
+            prime_factors[count++] = i;
             n /= i;
         }
     }
 
     if (n != 1) {
-        prime_factors[count] = n;
-        count++;
+        prime_factors[count++] = n;
     }
 
     return count;
