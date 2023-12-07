@@ -21,7 +21,7 @@ int factor(long long, long long[]);
 int main(void) {
     long long prime_factors[MAX_PRIME_FACTOR_COUNT];
 
-    /* Factors 600851475143. */
+    // Factors 600851475143.
     const int count = factor(600851475143, prime_factors);
 
     printf("%lld\n", prime_factors[count - 1]);
@@ -37,7 +37,7 @@ int main(void) {
 int factor(long long n, long long prime_factors[]) {
     int count = 0;
 
-    /* Performs trial division by the integers from 2 to `n` - 1. */
+    // Performs trial division by the integers from 2 to `n` - 1.
     for (long long i = 2; i < n; i++) {
         while (n % i == 0) {
             prime_factors[count++] = i;
