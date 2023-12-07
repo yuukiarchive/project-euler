@@ -2,7 +2,7 @@ CC     ?= cc
 CFLAGS := -std=c89 -pedantic-errors -Wall -W -Werror $(CFLAGS)
 
 SRC    := src
-BIN    := bin
+BUILD  := build
 
 SOURCE_FILES    := $(wildcard $(SRC)/*.c)
 PROBLEM_NUMBERS := $(patsubst $(SRC)/%.c,%,$(SOURCE_FILES))
@@ -12,11 +12,11 @@ all:
 	@exit 1
 
 $(PROBLEM_NUMBERS):
-	mkdir -p $(BIN)
-	$(CC) $(CFLAGS) -o $(BIN)/$@ $(SRC)/$@.c
+	mkdir -p $(BUILD)
+	$(CC) $(CFLAGS) -o $(BUILD)/$@ $(SRC)/$@.c
 
 docs:
 	doxygen
 
 clean:
-	rm -r $(BIN)
+	rm -r $(BUILD)
