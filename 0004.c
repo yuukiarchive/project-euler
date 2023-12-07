@@ -10,8 +10,8 @@
 /**
  * The size of the string buffer for the "ltoa" (long to ascii) conversion. A
  * positive `long` can be 2^31 - 1 = 2147483647, i.e., 10 characters long.
- * Including the minus sign and the terminating '\0', the size of 12 is
- * sufficient.
+ * Including the minus sign and a terminating <code>'\0'</code>, the size of 12
+ * is sufficient.
  */
 #define LTOA_BUFFER_SIZE 12
 
