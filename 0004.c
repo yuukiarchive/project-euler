@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define STRING_BUFFER_SIZE 12
+
 bool is_palindromic(const long);
 void reverse(char *);
 
@@ -36,12 +38,12 @@ int main(void) {
  * @param n An integer >= 0.
  */
 bool is_palindromic(const long n) {
-    /* Converts `n` to a string. */
-    char str[12];
-    snprintf(str, 12, "%ld", n);
+    /* Converts the number to a string. */
+    char str[STRING_BUFFER_SIZE];
+    snprintf(str, STRING_BUFFER_SIZE, "%ld", n);
 
     /* Duplicates and reverses the string. */
-    char reversed[12];
+    char reversed[STRING_BUFFER_SIZE];
     strcpy(reversed, str);
     reverse(reversed);
 
