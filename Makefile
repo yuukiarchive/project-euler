@@ -1,25 +1,22 @@
-CC=gcc-13 # gcc
-CFLAGS=-std=c89 -pedantic -Wall -Wextra -Werror
+CC     ?= cc
+CFLAGS := -std=c89 -pedantic-errors -Wall -W -Werror $(CFLAGS)
 
-SRC=src
-BIN=bin
+SRC    := src
+BIN    := bin
 
-SOURCE_FILES=$(wildcard $(SRC)/*.c)
-PROBLEM_NUMBERS=$(basename $(notdir $(SOURCE_FILES)))
+SOURCE_FILES    := $(wildcard $(SRC)/*.c)
+PROBLEM_NUMBERS := $(patsubst $(SRC)/%.c,%,$(SOURCE_FILES))
 
-.PHONY: all
 all:
-	$(error Please specify the problem number, like `make 0001`)
+	@echo Please specify the problem number, like \`make 0001\`.
+	@exit 1
 
-.PHONY: $(PROBLEM_NUMBERS)
 $(PROBLEM_NUMBERS):
 	mkdir -p $(BIN)
 	$(CC) $(CFLAGS) -o $(BIN)/$@ $(SRC)/$@.c
 
-.PHONY: docs
 docs:
 	doxygen
 
-.PHONY: clean
 clean:
 	rm -r $(BIN)
