@@ -1,6 +1,7 @@
 /**
  * @file
  * Sum of the positive integers less than 1000 that are divisible by 3 or 5.
+ * https://projecteuler.net/problem=1
  */
 #include <stdio.h>
 

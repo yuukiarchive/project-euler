@@ -92,6 +92,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sum of the positive integers less than 1000 that are divisible by 3 or 5. </p>
+<p><a href="https://projecteuler.net/problem=1">https://projecteuler.net/problem=1</a> </p>
 
 <p class="definition">Definition in file <a class="el" href="0001_8c_source.html">0001.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -111,26 +112,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="0001_8c_source.html#l00007">7</a> of file <a class="el" href="0001_8c_source.html">0001.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>               {</div>
-<div class="line"><span class="lineno">    8</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment">     * `int` is only guaranteed to go up to 2^15 - 1 = 32767, which is not</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment">     * enough. `long` is guaranteed to go up to 2^31 - 1 = 2147483647, which is</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment">     * sufficient since it is even greater than 1 + 2 + ... + 999 = 999*1000/2 =</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment">     * 499500.</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">long</span> sum = 0;</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">for</span> (i = 1; i &lt; 1000; i++) {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (i % 3 == 0 || i % 5 == 0) {</div>
-<div class="line"><span class="lineno">   19</span>            sum += i;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="line"><span class="lineno">   22</span> </div>
-<div class="line"><span class="lineno">   23</span>    printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="0001_8c_source.html#l00008">8</a> of file <a class="el" href="0001_8c_source.html">0001.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>               {</div>
+<div class="line"><span class="lineno">    9</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment">     * `int` is only guaranteed to go up to 2^15 - 1 = 32767, which is not</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment">     * enough. `long` is guaranteed to go up to 2^31 - 1 = 2147483647, which is</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment">     * sufficient since it is even greater than 1 + 2 + ... + 999 = 999*1000/2 =</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment">     * 499500.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">long</span> sum = 0;</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">for</span> (i = 1; i &lt; 1000; i++) {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (i % 3 == 0 || i % 5 == 0) {</div>
+<div class="line"><span class="lineno">   20</span>            sum += i;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>    printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   26</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
