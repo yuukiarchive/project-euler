@@ -7,7 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#define STRING_BUFFER_SIZE 12
+/**
+ * The size of the string buffer for the "ltoa" (long to ascii) conversion. A
+ * positive `long` can be 2^31 - 1 = 2147483647, i.e., 10 characters long.
+ * Including the minus sign and the terminating '\0', the size of 12 is
+ * sufficient.
+ */
+#define LTOA_BUFFER_SIZE 12
 
 bool is_palindromic(const long);
 void reverse(char *);
@@ -39,15 +45,23 @@ int main(void) {
  */
 bool is_palindromic(const long n) {
     /* Converts the number to a string. */
-    char str[STRING_BUFFER_SIZE];
-    snprintf(str, STRING_BUFFER_SIZE, "%ld", n);
+    char str[LTOA_BUFFER_SIZE];
+    sprintf(str, "%ld", n);
+    /*
+     * Or alternatively:
+     * const int length = snprintf(NULL, 0, "%ld", n);
+     * char *str = malloc(length + 1);
+     * sprintf(str, "%ld", n);
+     * ...
+     * free(str);
+     */
 
     /* Duplicates and reverses the string. */
-    char reversed[STRING_BUFFER_SIZE];
+    char reversed[LTOA_BUFFER_SIZE];
     strcpy(reversed, str);
     reverse(reversed);
 
-    /* Returns whether the reverse of `n` is equal to `n`. */
+    /* Returns whether the reverse is equal to the original. */
     return strcmp(reversed, str) == 0;
 }
 
