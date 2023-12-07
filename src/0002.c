@@ -1,6 +1,7 @@
 /**
  * @file
  * Sum of the even Fibonacci numbers less than or equal to 4000000.
+ * https://projecteuler.net/problem=2
  */
 #include <stdio.h>
 
@@ -9,8 +10,9 @@ long fib(const int);
 int main(void) {
     long sum = 0;
 
+    int i;
     long value;
-    for (int i = 1; (value = fib(i)) <= 4000000; i++) {
+    for (i = 1; (value = fib(i)) <= 4000000; i++) {
         if (value % 2 == 0) {
             sum += value;
         }

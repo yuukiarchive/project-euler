@@ -102,6 +102,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Largest prime factor of 600851475143. </p>
+<p><a href="https://projecteuler.net/problem=3">https://projecteuler.net/problem=3</a> </p>
 
 <p class="definition">Definition in file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -121,7 +122,7 @@ Functions</h2></td></tr>
 <p>For the number of prime factors of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n) &lt;= log_2 (n) because: </p><pre class="fragment">n = p_1 p_2 ... p_k &gt;= 2*2*...*2 = 2^k,
 </pre><p> where k = Omega(n). Since a <code>long long</code> is only guaranteed to go up to 2^63 - 1, the size of 64 is sufficient. </p>
 
-<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00017">17</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00018">18</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
 
 </div>
 </div>
@@ -162,24 +163,24 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of prime factors of <code>n</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00037">37</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                   {</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="comment">// Performs trial division by the integers from 2 to `n` - 1.</span></div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">for</span> (<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 2; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">while</span> (n % i == 0) {</div>
-<div class="line"><span class="lineno">   43</span>            prime_factors[count++] = i;</div>
-<div class="line"><span class="lineno">   44</span>            n /= i;</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (n != 1) {</div>
-<div class="line"><span class="lineno">   49</span>        prime_factors[count++] = n;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">   53</span>}</div>
+<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00038">38</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                   {</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">// Performs trial division by the integers from 2 to `n` - 1.</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">for</span> (<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 2; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">while</span> (n % i == 0) {</div>
+<div class="line"><span class="lineno">   44</span>            prime_factors[count++] = i;</div>
+<div class="line"><span class="lineno">   45</span>            n /= i;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (n != 1) {</div>
+<div class="line"><span class="lineno">   50</span>        prime_factors[count++] = n;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">   54</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,17 +200,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00021">21</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>               {</div>
-<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> prime_factors[<a class="code hl_define" href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a>];</div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>    <span class="comment">// Factors 600851475143.</span></div>
-<div class="line"><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_function" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a>(600851475143, prime_factors);</div>
-<div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>    printf(<span class="stringliteral">&quot;%lld\n&quot;</span>, prime_factors[count - 1]);</div>
-<div class="line"><span class="lineno">   28</span>}</div>
-<div class="ttc" id="a0003_8c_html_a85e0670ac20fe3011a67a2e7592e484e"><div class="ttname"><a href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a></div><div class="ttdeci">#define MAX_PRIME_FACTOR_COUNT</div><div class="ttdoc">The size of the array to store prime factors.</div><div class="ttdef"><b>Definition</b> <a href="0003_8c_source.html#l00017">0003.c:17</a></div></div>
-<div class="ttc" id="a0003_8c_html_af4e821f0f3c7ba647f998b1f2c6e57be"><div class="ttname"><a href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a></div><div class="ttdeci">int factor(long long, long long[])</div><div class="ttdoc">Factors an integer into primes.</div><div class="ttdef"><b>Definition</b> <a href="0003_8c_source.html#l00037">0003.c:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00022">22</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>               {</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> prime_factors[<a class="code hl_define" href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a>];</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    <span class="comment">// Factors 600851475143.</span></div>
+<div class="line"><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_function" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a>(600851475143, prime_factors);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    printf(<span class="stringliteral">&quot;%lld\n&quot;</span>, prime_factors[count - 1]);</div>
+<div class="line"><span class="lineno">   29</span>}</div>
+<div class="ttc" id="a0003_8c_html_a85e0670ac20fe3011a67a2e7592e484e"><div class="ttname"><a href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a></div><div class="ttdeci">#define MAX_PRIME_FACTOR_COUNT</div><div class="ttdoc">The size of the array to store prime factors.</div><div class="ttdef"><b>Definition</b> <a href="0003_8c_source.html#l00018">0003.c:18</a></div></div>
+<div class="ttc" id="a0003_8c_html_af4e821f0f3c7ba647f998b1f2c6e57be"><div class="ttname"><a href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a></div><div class="ttdeci">int factor(long long, long long[])</div><div class="ttdoc">Factors an integer into primes.</div><div class="ttdef"><b>Definition</b> <a href="0003_8c_source.html#l00038">0003.c:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

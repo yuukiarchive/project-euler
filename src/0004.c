@@ -2,6 +2,7 @@
  * @file
  * Largest palindromic number that is the product of two 3-digit positive
  * integers.
+ * https://projecteuler.net/problem=4
  */
 #include <stdbool.h>
 #include <stdio.h>
