@@ -162,7 +162,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>                                                   {</div>
 <div class="line"><span class="lineno">   38</span>    <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="comment">/* Performs trial division by the integers from 2 to `n` - 1. */</span></div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment">// Performs trial division by the integers from 2 to `n` - 1.</span></div>
 <div class="line"><span class="lineno">   41</span>    <span class="keywordflow">for</span> (<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 2; i &lt; n; i++) {</div>
 <div class="line"><span class="lineno">   42</span>        <span class="keywordflow">while</span> (n % i == 0) {</div>
 <div class="line"><span class="lineno">   43</span>            prime_factors[count++] = i;</div>
@@ -199,7 +199,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>               {</div>
 <div class="line"><span class="lineno">   22</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> prime_factors[<a class="code hl_define" href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a>];</div>
 <div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>    <span class="comment">/* Factors 600851475143. */</span></div>
+<div class="line"><span class="lineno">   24</span>    <span class="comment">// Factors 600851475143.</span></div>
 <div class="line"><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_function" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a>(600851475143, prime_factors);</div>
 <div class="line"><span class="lineno">   26</span> </div>
 <div class="line"><span class="lineno">   27</span>    printf(<span class="stringliteral">&quot;%lld\n&quot;</span>, prime_factors[count - 1]);</div>

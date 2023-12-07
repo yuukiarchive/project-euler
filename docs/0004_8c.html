@@ -150,29 +150,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="0004_8c_source.html#l00046">46</a> of file <a class="el" href="0004_8c_source.html">0004.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                  {</div>
-<div class="line"><span class="lineno">   47</span>    <span class="comment">/* Converts the number to a string. */</span></div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordtype">char</span> str[<a class="code hl_define" href="0004_8c.html#a6d4c490782d635275bbe56b330e71551">LTOA_BUFFER_SIZE</a>];</div>
-<div class="line"><span class="lineno">   49</span>    sprintf(str, <span class="stringliteral">&quot;%ld&quot;</span>, n);</div>
-<div class="line"><span class="lineno">   50</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">     * Or alternatively:</span></div>
-<div class="line"><span class="lineno">   52</span><span class="comment">     * const int length = snprintf(NULL, 0, &quot;%ld&quot;, n);</span></div>
-<div class="line"><span class="lineno">   53</span><span class="comment">     * char *str = malloc(length + 1);</span></div>
-<div class="line"><span class="lineno">   54</span><span class="comment">     * sprintf(str, &quot;%ld&quot;, n);</span></div>
-<div class="line"><span class="lineno">   55</span><span class="comment">     * ...</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">     * free(str);</span></div>
-<div class="line"><span class="lineno">   57</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>    <span class="comment">/* Duplicates and reverses the string. */</span></div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordtype">char</span> reversed[<a class="code hl_define" href="0004_8c.html#a6d4c490782d635275bbe56b330e71551">LTOA_BUFFER_SIZE</a>];</div>
-<div class="line"><span class="lineno">   61</span>    strcpy(reversed, str);</div>
-<div class="line"><span class="lineno">   62</span>    <a class="code hl_function" href="0004_8c.html#a1a10a7b53fbcaaa872e4f7fe5ffab3c4">reverse</a>(reversed);</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>    <span class="comment">/* Returns whether the reverse is equal to the original. */</span></div>
-<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> strcmp(reversed, str) == 0;</div>
-<div class="line"><span class="lineno">   66</span>}</div>
-<div class="ttc" id="a0004_8c_html_a1a10a7b53fbcaaa872e4f7fe5ffab3c4"><div class="ttname"><a href="0004_8c.html#a1a10a7b53fbcaaa872e4f7fe5ffab3c4">reverse</a></div><div class="ttdeci">void reverse(char *)</div><div class="ttdoc">Reverses a string in-place.</div><div class="ttdef"><b>Definition</b> <a href="0004_8c_source.html#l00071">0004.c:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="0004_8c_source.html#l00044">44</a> of file <a class="el" href="0004_8c_source.html">0004.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                  {</div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment">// Converts the number to a string.</span></div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordtype">char</span> str[<a class="code hl_define" href="0004_8c.html#a6d4c490782d635275bbe56b330e71551">LTOA_BUFFER_SIZE</a>];</div>
+<div class="line"><span class="lineno">   47</span>    sprintf(str, <span class="stringliteral">&quot;%ld&quot;</span>, n);</div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment">// Or alternatively:</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// const int length = snprintf(NULL, 0, &quot;%ld&quot;, n);</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">// char *str = malloc(length + 1);</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">// sprintf(str, &quot;%ld&quot;, n);</span></div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">// ...</span></div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment">// free(str);</span></div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment">// Duplicates and reverses the string.</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordtype">char</span> reversed[<a class="code hl_define" href="0004_8c.html#a6d4c490782d635275bbe56b330e71551">LTOA_BUFFER_SIZE</a>];</div>
+<div class="line"><span class="lineno">   57</span>    strcpy(reversed, str);</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_function" href="0004_8c.html#a1a10a7b53fbcaaa872e4f7fe5ffab3c4">reverse</a>(reversed);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment">// Returns whether the reverse is equal to the original.</span></div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> strcmp(reversed, str) == 0;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a0004_8c_html_a1a10a7b53fbcaaa872e4f7fe5ffab3c4"><div class="ttname"><a href="0004_8c.html#a1a10a7b53fbcaaa872e4f7fe5ffab3c4">reverse</a></div><div class="ttdeci">void reverse(char *)</div><div class="ttdoc">Reverses a string in-place.</div><div class="ttdef"><b>Definition</b> <a href="0004_8c_source.html#l00067">0004.c:67</a></div></div>
 <div class="ttc" id="a0004_8c_html_a6d4c490782d635275bbe56b330e71551"><div class="ttname"><a href="0004_8c.html#a6d4c490782d635275bbe56b330e71551">LTOA_BUFFER_SIZE</a></div><div class="ttdeci">#define LTOA_BUFFER_SIZE</div><div class="ttdoc">The size of the string buffer for the &quot;ltoa&quot; (long to ascii) conversion.</div><div class="ttdef"><b>Definition</b> <a href="0004_8c_source.html#l00016">0004.c:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -197,24 +195,22 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>               {</div>
 <div class="line"><span class="lineno">   22</span>    <span class="keywordtype">long</span> max_palindrome = -1;</div>
 <div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   25</span><span class="comment">     * Loops through 900^2 = 810000 numbers, the Cartesian square of 3-digit</span></div>
-<div class="line"><span class="lineno">   26</span><span class="comment">     * numbers. This is inefficient. Even in case a Cartesian product is really</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">     * needed, `std::views::cartesian_product` in C++23 (or `itertools.product`</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">     * in Python), for example, is more efficient than a nested `for`.</span></div>
-<div class="line"><span class="lineno">   29</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 100; i &lt;= 999; i++) {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 100; j &lt;= 999; j++) {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> product = i * j;</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="0004_8c.html#afc520e2b3edb716835fa667cfa7f0429">is_palindromic</a>(product) &amp;&amp; product &gt; max_palindrome) {</div>
-<div class="line"><span class="lineno">   34</span>                max_palindrome = product;</div>
-<div class="line"><span class="lineno">   35</span>            }</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>    printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, max_palindrome);</div>
-<div class="line"><span class="lineno">   40</span>}</div>
-<div class="ttc" id="a0004_8c_html_afc520e2b3edb716835fa667cfa7f0429"><div class="ttname"><a href="0004_8c.html#afc520e2b3edb716835fa667cfa7f0429">is_palindromic</a></div><div class="ttdeci">bool is_palindromic(const long)</div><div class="ttdoc">Determines if an integer is palindromic.</div><div class="ttdef"><b>Definition</b> <a href="0004_8c_source.html#l00046">0004.c:46</a></div></div>
+<div class="line"><span class="lineno">   24</span>    <span class="comment">// Loops through 900^2 = 810000 numbers, the Cartesian square of 3-digit</span></div>
+<div class="line"><span class="lineno">   25</span>    <span class="comment">// numbers. This is inefficient. Even in case a Cartesian product is really</span></div>
+<div class="line"><span class="lineno">   26</span>    <span class="comment">// needed, `std::views::cartesian_product` in C++23 (or `itertools.product`</span></div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// in Python), for example, is more efficient than a nested `for`.</span></div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 100; i &lt;= 999; i++) {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 100; j &lt;= 999; j++) {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> product = i * j;</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="0004_8c.html#afc520e2b3edb716835fa667cfa7f0429">is_palindromic</a>(product) &amp;&amp; product &gt; max_palindrome) {</div>
+<div class="line"><span class="lineno">   32</span>                max_palindrome = product;</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, max_palindrome);</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+<div class="ttc" id="a0004_8c_html_afc520e2b3edb716835fa667cfa7f0429"><div class="ttname"><a href="0004_8c.html#afc520e2b3edb716835fa667cfa7f0429">is_palindromic</a></div><div class="ttdeci">bool is_palindromic(const long)</div><div class="ttdoc">Determines if an integer is palindromic.</div><div class="ttdef"><b>Definition</b> <a href="0004_8c_source.html#l00044">0004.c:44</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -236,20 +232,20 @@ Functions</h2></td></tr>
 
 <p>Reverses a string in-place. </p>
 
-<p class="definition">Definition at line <a class="el" href="0004_8c_source.html#l00071">71</a> of file <a class="el" href="0004_8c_source.html">0004.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                        {</div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">/* If the string is empty, does nothing. */</span></div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (!*str) {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = strlen(str);</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, j = length - 1; i &lt; j; i++, j--) {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">char</span> tmp = str[i];</div>
-<div class="line"><span class="lineno">   80</span>        str[i] = str[j];</div>
-<div class="line"><span class="lineno">   81</span>        str[j] = tmp;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="line"><span class="lineno">   83</span>}</div>
+<p class="definition">Definition at line <a class="el" href="0004_8c_source.html#l00067">67</a> of file <a class="el" href="0004_8c_source.html">0004.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                        {</div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">// If the string is empty, does nothing.</span></div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> (!*str) {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = strlen(str);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, j = length - 1; i &lt; j; i++, j--) {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">char</span> tmp = str[i];</div>
+<div class="line"><span class="lineno">   76</span>        str[i] = str[j];</div>
+<div class="line"><span class="lineno">   77</span>        str[j] = tmp;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   79</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -88,7 +88,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="0003_8c.html#a840291bc02cba5474a4cb46a9b9566fe">   21</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="0003_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> prime_factors[<a class="code hl_define" href="0003_8c.html#a85e0670ac20fe3011a67a2e7592e484e">MAX_PRIME_FACTOR_COUNT</a>];</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* Factors 600851475143. */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Factors 600851475143.</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_function" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a>(600851475143, prime_factors);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    printf(<span class="stringliteral">&quot;%lld\n&quot;</span>, prime_factors[count - 1]);</div>
@@ -99,7 +99,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">   37</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="0003_8c.html#af4e821f0f3c7ba647f998b1f2c6e57be">factor</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> n, <span class="keywordtype">long</span> <span class="keywordtype">long</span> prime_factors[]) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">/* Performs trial division by the integers from 2 to `n` - 1. */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Performs trial division by the integers from 2 to `n` - 1.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">for</span> (<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 2; i &lt; n; i++) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">while</span> (n % i == 0) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            prime_factors[count++] = i;</div>
