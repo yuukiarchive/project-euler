@@ -22,7 +22,7 @@ int main(void) {
 }
 
 /**
- * Computes the nth Fibonacci number, for n >= 1, starting with 1 and 2.
+ * Computes the nth Fibonacci number for n >= 1, starting with 1 and 2.
  */
 long fib(const int n) {
     if (n == 1) {
