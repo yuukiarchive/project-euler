@@ -117,17 +117,17 @@ Functions</h2></td></tr>
 
 <p>Computes the nth Fibonacci number for n &gt;= 1, starting with 1 and 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="0002_8c_source.html#l00027">27</a> of file <a class="el" href="0002_8c_source.html">0002.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                      {</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (n == 1) {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (n == 2) {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a>(n - 1) + <a class="code hl_function" href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a>(n - 2);</div>
-<div class="line"><span class="lineno">   35</span>}</div>
-<div class="ttc" id="a0002_8c_html_affeccc7816e4298563b280253da304b6"><div class="ttname"><a href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a></div><div class="ttdeci">long fib(const int)</div><div class="ttdoc">Computes the nth Fibonacci number for n &gt;= 1, starting with 1 and 2.</div><div class="ttdef"><b>Definition</b> <a href="0002_8c_source.html#l00027">0002.c:27</a></div></div>
+<p class="definition">Definition at line <a class="el" href="0002_8c_source.html#l00029">29</a> of file <a class="el" href="0002_8c_source.html">0002.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                      {</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (n == 1) {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (n == 2) {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a>(n - 1) + <a class="code hl_function" href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a>(n - 2);</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="a0002_8c_html_affeccc7816e4298563b280253da304b6"><div class="ttname"><a href="0002_8c.html#affeccc7816e4298563b280253da304b6">fib</a></div><div class="ttdeci">long fib(const int)</div><div class="ttdoc">Computes the nth Fibonacci number for n &gt;= 1, starting with 1 and 2.</div><div class="ttdef"><b>Definition</b> <a href="0002_8c_source.html#l00029">0002.c:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -160,7 +160,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   19</span>    }</div>
 <div class="line"><span class="lineno">   20</span> </div>
 <div class="line"><span class="lineno">   21</span>    printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
-<div class="line"><span class="lineno">   22</span>}</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -28,6 +28,7 @@ int main(void) {
 
     /* FIXME: No portable way to print an `int64_t`. */
     printf("%ld\n", (long)prime_factors[count - 1]);
+
     return 0;
 }
 
