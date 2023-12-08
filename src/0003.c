@@ -5,7 +5,6 @@
  */
 #include <stdio.h>
 #include <stdint.h>
-#include <inttypes.h>
 
 /**
  * The size of the array to store prime factors. For the number of prime factors
