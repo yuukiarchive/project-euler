@@ -3,18 +3,18 @@
  * Largest prime factor of 600851475143.
  * https://projecteuler.net/problem=3
  */
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 
 /**
- * The size of the array to store prime factors. For the number of prime factors
- * of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n)
- * <= log_2 (n) because:
+ * The size of the array to store prime factors. We have Omega(n) <= log_2 (n),
+ * where Omega(n) is the number of prime factors (including duplicates) of a
+ * positive integer n, because:
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
- * where k = Omega(n). Since an `int64_t` is only guaranteed to go up to 2^63 -
- * 1, the size of 64 is sufficient.
+ * where k = Omega(n). Since the maximum value of an `int64_t` is exactly 2^63 -
+ * 1, a size of 64 is sufficient.
  */
 #define MAX_PRIME_FACTOR_COUNT 64
 
@@ -34,9 +34,9 @@ int main(void) {
 
 /**
  * Factors an integer into primes.
- * @param n The integer to factor, must be > 1.
- * @param prime_factors The array to store the prime factors of `n` in order
- * from smallest to largest.
+ * @param n An integer > 1.
+ * @param prime_factors An array to store the prime factors of `n`. The results
+ * are in order from smallest to largest.
  * @return The number of prime factors of `n`.
  */
 int factor(int64_t n, int64_t prime_factors[]) {

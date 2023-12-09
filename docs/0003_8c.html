@@ -82,8 +82,8 @@ $(function() {
 
 <p>Largest prime factor of 600851475143.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div>
 <p><a href="0003_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -120,8 +120,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The size of the array to store prime factors. </p>
-<p>For the number of prime factors of a positive integer n (with multiplicity) Omega(n), it holds that Omega(n) &lt;= log_2 (n) because: </p><pre class="fragment">n = p_1 p_2 ... p_k &gt;= 2*2*...*2 = 2^k,
-</pre><p> where k = Omega(n). Since an <code>int64_t</code> is only guaranteed to go up to 2^63 - 1, the size of 64 is sufficient. </p>
+<p>We have Omega(n) &lt;= log_2 (n), where Omega(n) is the number of prime factors (including duplicates) of a positive integer n, because: </p><pre class="fragment">n = p_1 p_2 ... p_k &gt;= 2*2*...*2 = 2^k,
+</pre><p> where k = Omega(n). Since the maximum value of an <code>int64_t</code> is exactly 2^63 - 1, a size of 64 is sufficient. </p>
 
 <p class="definition">Definition at line <a class="el" href="0003_8c_source.html#l00019">19</a> of file <a class="el" href="0003_8c_source.html">0003.c</a>.</p>
 
@@ -157,8 +157,8 @@ Functions</h2></td></tr>
 <p>Factors an integer into primes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>The integer to factor, must be &gt; 1. </td></tr>
-    <tr><td class="paramname">prime_factors</td><td>The array to store the prime factors of <code>n</code> in order from smallest to largest. </td></tr>
+    <tr><td class="paramname">n</td><td>An integer &gt; 1. </td></tr>
+    <tr><td class="paramname">prime_factors</td><td>An array to store the prime factors of <code>n</code>. The results are in order from smallest to largest. </td></tr>
   </table>
   </dd>
 </dl>
