@@ -9,9 +9,9 @@
 
 /**
  * The size of the string buffer for the "ltoa" (long to ascii) conversion. The
- * maximum number of digits in a positive `long` is D =
- * floor(log10(LONG_MAX)) + 1. The buffer size must be >= D + 2, including the
- * minus sign and a terminating <code>'\0'</code>.
+ * maximum number of digits in a positive `long` is
+ * D = floor(log10(LONG_MAX)) + 1. The buffer size must be >= D + 2, including
+ * the minus sign and a terminating <code>'\0'</code>.
  *
  * FIXME: This should not be a fixed size.
  */
@@ -26,8 +26,8 @@ int main(void) {
     /*
      * Loops through 900^2 = 810000 numbers, the Cartesian square of 3-digit
      * numbers. This is inefficient. Even in case a Cartesian product is really
-     * needed, `std::views::cartesian_product` in C++23 (or `itertools.product`
-     * in Python), for example, is more efficient than a nested `for`.
+     * needed, something like `std::views::cartesian_product` in C++23 (or
+     * `itertools.product` in Python) is more efficient than a nested `for`.
      */
     int i;
     int j;
@@ -64,7 +64,7 @@ int is_palindromic(const long n) {
      * free(str);
      */
 
-    /* Duplicates and reverses the string. */
+    /* Duplicates the string and reverses it. */
     strcpy(reversed, str);
     reverse(reversed);
 
