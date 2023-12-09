@@ -7,14 +7,14 @@
 #include <stdio.h>
 
 /**
- * The size of the array to store prime factors. We have Omega(n) <= log_2 (n),
+ * The size of the array to store prime factors. We have Omega(n) <= log2(n),
  * where Omega(n) is the number of prime factors (including duplicates) of a
  * positive integer n, because:
  *
  *     n = p_1 p_2 ... p_k >= 2*2*...*2 = 2^k,
  *
- * where k = Omega(n). Since the maximum value of an `int64_t` is exactly 2^63 -
- * 1, a size of 64 is sufficient.
+ * where k = Omega(n). Since the maximum value of an `int64_t` is exactly
+ * 2^63 - 1, a size of 64 is sufficient.
  */
 #define MAX_PRIME_FACTOR_COUNT 64
 
