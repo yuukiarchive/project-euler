@@ -1,6 +1,6 @@
 # FIXME: `make [XXXX]` and `make docs` recompile every time.
 
-# CC=cc is set by default in GNU `make`.
+# CC=cc is set by default in GNU Make.
 CFLAGS := -O3 -march=native -std=c89 -pedantic-errors -Wall -W -Werror $(CFLAGS)
 
 SRC    := src
