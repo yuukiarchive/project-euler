@@ -87,7 +87,7 @@ void reverse(char *str) {
 
     length = strlen(str);
     for (i = 0, j = length - 1; i < j; i++, j--) {
-        char tmp = str[i];
+        const char tmp = str[i];
         str[i] = str[j];
         str[j] = tmp;
     }

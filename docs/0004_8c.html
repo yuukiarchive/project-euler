@@ -259,7 +259,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   87</span> </div>
 <div class="line"><span class="lineno">   88</span>    length = strlen(str);</div>
 <div class="line"><span class="lineno">   89</span>    <span class="keywordflow">for</span> (i = 0, j = length - 1; i &lt; j; i++, j--) {</div>
-<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">char</span> tmp = str[i];</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> tmp = str[i];</div>
 <div class="line"><span class="lineno">   91</span>        str[i] = str[j];</div>
 <div class="line"><span class="lineno">   92</span>        str[j] = tmp;</div>
 <div class="line"><span class="lineno">   93</span>    }</div>
