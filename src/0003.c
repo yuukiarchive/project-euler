@@ -42,7 +42,10 @@ int main(void) {
 int factor(int64_t n, int64_t prime_factors[]) {
     int count = 0;
 
-    /* Performs trial division by the integers from 2 to `n` - 1. */
+    /*
+     * Performs trial division by every integer `i` such that 2 <= `i` <= `n` -
+     * 1.
+     */
     int64_t i;
     for (i = 2; i < n; i++) {
         while (n % i == 0) {
