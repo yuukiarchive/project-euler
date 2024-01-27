@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['in_20c_0',['Project Euler in C',['../index.html',1,'']]],
-  ['is_5fpalindromic_1',['is_palindromic',['../0004_8c.html#a530a254e15b02f0638adf05ec9155431',1,'0004.c']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];
